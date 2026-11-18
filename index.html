@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratorium TTPL — Departemen Teknik Elektro FTUI</title>
+  <meta name="description" content="Laboratorium Tegangan Tinggi dan Pengukuran Listrik (TTPL), Gedung Departemen Teknik Elektro Lt. 2, Fakultas Teknik Universitas Indonesia, Depok.">
+  <link rel="icon" type="image/png" href="assets/ttpl-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Skip to main content</a>
+
+  <!-- Top Hairline Scroll Progress Bar -->
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Architectural Full-Width Masthead -->
+  <header class="masthead" id="top">
+    <div class="masthead-top-rule" aria-hidden="true"></div>
+    <div class="container masthead-inner">
+      <a href="#hero" class="brand" aria-label="Laboratorium TTPL FTUI">
+        <img src="assets/ttpl-logo.png" alt="Logo Laboratorium TTPL FTUI" width="40" height="40">
+        <span class="brand-lockup">
+          <strong>LAB. TTPL</strong>
+          <small>DTE · FTUI DEPOK</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Primary sections">
+        <a href="#profile" data-i18n="nav.profile">Profile</a>
+        <a href="#syllabus" data-i18n="nav.syllabus">Practicum</a>
+        <a href="#bench" data-i18n="nav.bench">Simulation</a>
+        <a href="#instruments" data-i18n="nav.instruments">Instruments</a>
+        <a href="#artifacts" data-i18n="nav.artifacts">Research</a>
+        <a href="#people" data-i18n="nav.people">People</a>
+        <a href="#alumni" data-i18n="nav.alumni">Alumni</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="masthead-controls">
+        <button type="button" id="lang-toggle" class="ctrl-btn" aria-label="Switch language">
+          <span id="lang-active">EN</span><span class="ctrl-sep">/</span><span id="lang-inactive">ID</span>
+        </button>
+        <button type="button" id="theme-toggle" class="ctrl-btn" aria-label="Switch paper or night mode">
+          <span id="theme-label">NIGHT</span>
+        </button>
+        <button type="button" id="mobile-menu-btn" class="ctrl-btn mobile-only" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+          MENU
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ================================================================
+         MONUMENTAL EDITORIAL HERO
+         ================================================================ -->
+    <section id="hero" class="hero" tabindex="-1">
+      <div class="container hero-layout">
+        <div class="hero-editorial">
+          <div class="running-kicker">
+            <span class="kicker-left" data-i18n="hero.dept">Departemen Teknik Elektro · FTUI</span>
+            <span class="kicker-right">GEDUNG DTE LT. 2 · KAMPUS BARU UI DEPOK</span>
+          </div>
+
+          <h1 class="display-title">
+            <span data-i18n="hero.line1">High Voltage</span>
+            <span class="display-amp">&amp;</span>
+            <span data-i18n="hero.line2">Electrical Measurement</span>
+            <em class="display-italic" data-i18n="hero.line3">Surging With Voltage.</em>
+          </h1>
+
+          <div class="ttpl-double-rule" aria-hidden="true"></div>
+
+          <p class="hero-deck" data-i18n="hero.deck">
+            Laboratorium Tegangan Tinggi dan Pengukuran Listrik (TTPL) is the teaching, research, and testing center for high-voltage engineering, precision instrumentation, grounding systems, and electric power networks at Universitas Indonesia.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#syllabus" class="btn-solid" data-i18n="hero.ctaSyllabus">Inspect Practicum Syllabus</a>
+            <a href="#bench" class="btn-outline" data-i18n="hero.ctaBench">Open Engineering Bench</a>
+            <a href="#people" class="btn-text" data-i18n="hero.ctaPeople">Meet Batch 2024 Crew →</a>
+          </div>
+
+          <!-- Sharp Booktabs Metadata Ledger -->
+          <div class="hero-ledger">
+            <div class="ledger-cell">
+              <span class="ledger-key" data-i18n="ledger.tracks">DISCIPLINES</span>
+              <strong>03 Tracks</strong>
+              <small>RL · IDP · T3</small>
+            </div>
+            <div class="ledger-cell">
+              <span class="ledger-key" data-i18n="ledger.modules">CURRICULUM</span>
+              <strong>24+ Modules</strong>
+              <small>Bilingual ID / EN (KKI)</small>
+            </div>
+            <div class="ledger-cell">
+              <span class="ledger-key" data-i18n="ledger.location">LABORATORY</span>
+              <strong>DTE Floor 2</strong>
+              <small>Kampus Baru UI 16424</small>
+            </div>
+            <div class="ledger-cell">
+              <span class="ledger-key" data-i18n="ledger.motto">IDENTITY</span>
+              <strong>#UnleashYourPower</strong>
+              <small>Est. Power Division</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Framed Architectural Plate + Live Precision Oscilloscope Plot -->
+        <aside class="hero-plate">
+          <figure class="plate-photo">
+            <img src="assets/hero_pylons.jpg" alt="High voltage transmission pylons at dusk" fetchpriority="high">
+            <figcaption>
+              <span>FIG. 01</span>
+              <span data-i18n="hero.figCap">HIGH-VOLTAGE TRANSMISSION &amp; DIELECTRIC SYSTEMS</span>
+            </figcaption>
+          </figure>
+
+          <div class="hero-scope-strip">
+            <div class="scope-strip-head">
+              <div class="scope-meta">
+                <span class="scope-dot" aria-hidden="true"></span>
+                <strong id="hero-scope-title">50 Hz GRID · 220 Vrms / 311 Vpk</strong>
+              </div>
+              <div class="scope-controls">
+                <button type="button" class="mini-tab active" data-wave="ac50">50 Hz AC</button>
+                <button type="button" class="mini-tab" data-wave="impulse">1.2/50 μs Impulse</button>
+                <button type="button" class="mini-tab" data-wave="three">3-Phase</button>
+                <button type="button" id="hero-wave-pause" class="mini-tab pause-tab">Pause</button>
+              </div>
+            </div>
+            <canvas id="hero-scope-canvas" width="520" height="126" aria-label="Live electrical waveform oscilloscope trace"></canvas>
+            <div class="scope-strip-foot">
+              <span id="hero-scope-formula">v(t) = 311.1 sin(100πt) V · IEEE 1159 NOMINAL</span>
+              <span>TTPL-UI</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 01 · PROFILE, MANDATE & ENGINEERING VALUES
+         ================================================================ -->
+    <section id="profile" class="section" tabindex="-1">
+      <div class="container">
+        <header class="chapter-header reveal">
+          <div class="chapter-running">
+            <span>SECTION 01</span>
+            <span data-i18n="profile.running">LABORATORY PROFILE &amp; MANDATE</span>
+          </div>
+          <h2 data-i18n="profile.title">Where High Voltage Meets Precision Measurement.</h2>
+          <div class="chapter-rule" aria-hidden="true"></div>
+        </header>
+
+        <div class="editorial-two-col">
+          <div class="editorial-prose reveal">
+            <!-- Direct homage to TTPL LaTeX quotebox (primaryBlue 4.5px left rule, sharp corners) -->
+            <blockquote class="ttpl-quotebox" data-i18n="profile.mandate">
+              “Berfokus pada pembelajaran, penelitian, dan pengujian di bidang <strong>tegangan tinggi</strong>, <strong>pengukuran listrik</strong>, serta <strong>sistem tenaga listrik</strong>.”
+            </blockquote>
+
+            <p data-i18n="profile.p1">
+              Operating on the second floor of the Department of Electrical Engineering building at FTUI Depok, Laboratorium TTPL bridges analytical electrical theory with disciplined laboratory practice for both Regular and International Undergraduate (KKI) students.
+            </p>
+            <p data-i18n="profile.p2">
+              Every semester, students progress from linear DC/AC circuit theorems and calibrated benchtop instrumentation to 3-point Fall-of-Potential soil earthing and AC/DC/Impulse high-voltage breakdown testing inside the safety cage.
+            </p>
+
+            <!-- Direct homage to TTPL LaTeX formulabox (darkYellow 4.5px left rule, lightBlue tint) -->
+            <div class="ttpl-formulabox">
+              <div class="fbox-title" data-i18n="profile.valuesTitle">Core Engineering Culture · What TTPL Stands For</div>
+              <ol class="values-ledger">
+                <li><span>01</span><strong data-i18n="values.v1">Technical Curiosity</strong><small data-i18n="values.v1d">Questioning every reading, tolerance, and physical mechanism behind the meter.</small></li>
+                <li><span>02</span><strong data-i18n="values.v2">Responsibility &amp; Commitment</strong><small data-i18n="values.v2d">Strict adherence to high-voltage interlocks, calibration procedures, and deadlines.</small></li>
+                <li><span>03</span><strong data-i18n="values.v3">Communication &amp; Teamwork</strong><small data-i18n="values.v3d">Clear technical reporting, peer teaching, and coordinated bench execution.</small></li>
+                <li><span>04</span><strong data-i18n="values.v4">Problem Solving Mindset</strong><small data-i18n="values.v4d">Diagnosing wiring faults, harmonic distortion, and grounding anomalies systematically.</small></li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="editorial-aside reveal">
+            <figure class="specimen-figure">
+              <img src="assets/ttpl-slide-1.jpg" alt="TTPL Laboratory Assistants with Fluke 15B MAX Digital Multimeter" loading="lazy">
+              <figcaption>
+                <div>
+                  <strong>FIG. 02 · FLUKE 15B MAX &amp; LAB CREW</strong>
+                  <span data-i18n="profile.fig2">Hands-on instrument discipline across RL, IDP, and T3 sessions.</span>
+                </div>
+                <button type="button" class="inspect-link" data-lightbox="assets/ttpl-slide-1.jpg" data-lightbox-title="TTPL Open Recruitment &amp; Fluke 15B MAX Lab Standard" data-i18n="common.enlarge">Enlarge ↗</button>
+              </figcaption>
+            </figure>
+
+            <!-- Booktabs USP Table (No vertical borders, crisp horizontal rules only) -->
+            <table class="booktabs-table usp-table">
+              <caption data-i18n="profile.uspCaption">Table 1.1 — Unique Selling Propositions of Laboratorium TTPL</caption>
+              <thead>
+                <tr>
+                  <th style="width: 60px;">NO.</th>
+                  <th data-i18n="profile.colPillar">PILLAR</th>
+                  <th data-i18n="profile.colScope">LABORATORY PRACTICE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="mono">I</td>
+                  <td><strong data-i18n="usp.u1Title">Hands-on Experience</strong></td>
+                  <td data-i18n="usp.u1Desc">Direct wiring &amp; testing with calibrated Fluke multimeters, PQA, earth testers, oscilloscopes, and HV sets.</td>
+                </tr>
+                <tr>
+                  <td class="mono">II</td>
+                  <td><strong data-i18n="usp.u2Title">Professional Collaboration</strong></td>
+                  <td data-i18n="usp.u2Desc">Structured KKI &amp; Regular practicum operations uniting student cohorts, assistants, and industry partners.</td>
+                </tr>
+                <tr>
+                  <td class="mono">III</td>
+                  <td><strong data-i18n="usp.u3Title">Technical Skill Mastery</strong></td>
+                  <td data-i18n="usp.u3Desc">Deep grounding in circuit analysis, IEEE 1159 power quality, IEEE 81 earthing, and IEC 60060 HV testing.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 02 · INTERACTIVE LATEX-STYLE PRACTICUM SYLLABUS
+         ================================================================ -->
+    <section id="syllabus" class="section section-tinted" tabindex="-1">
+      <div class="container">
+        <header class="chapter-header reveal">
+          <div class="chapter-running">
+            <span>SECTION 02</span>
+            <span data-i18n="syllabus.running">PRACTICUM CURRICULUM &amp; OPERATING STANDARD</span>
+          </div>
+          <h2 data-i18n="syllabus.title">Three Disciplines. One Practicum Standard.</h2>
+          <div class="chapter-rule" aria-hidden="true"></div>
+        </header>
+
+        <!-- Track Index Bar -->
+        <div class="track-selector reveal" role="tablist" aria-label="Practicum tracks">
+          <button type="button" class="track-btn active" role="tab" aria-selected="true" data-track="rl" id="tab-rl" aria-controls="syllabus-panel">
+            <span class="track-sem sem5">SEMESTER 5</span>
+            <strong>01 / Rangkaian Listrik (RL)</strong>
+            <small data-i18n="syllabus.rlMeta">8 Modules · 5 Report Checkpoints · DC, AC &amp; 3-Phase</small>
+          </button>
+          <button type="button" class="track-btn" role="tab" aria-selected="false" data-track="idp" id="tab-idp" aria-controls="syllabus-panel">
+            <span class="track-sem sem5">SEMESTER 5</span>
+            <strong>02 / Instrumentasi &amp; Pengukuran (IDP)</strong>
+            <small data-i18n="syllabus.idpMeta">8 Modules · Analog/Digital, Power Quality &amp; Grounding</small>
+          </button>
+          <button type="button" class="track-btn" role="tab" aria-selected="false" data-track="t3" id="tab-t3" aria-controls="syllabus-panel">
+            <span class="track-sem sem7">SEMESTER 7</span>
+            <strong>03 / Teknik Tegangan &amp; Arus Tinggi (T3)</strong>
+            <small data-i18n="syllabus.t3Meta">8–10 Modules · AC/DC/Impulse HV &amp; Dielectric Testing</small>
+          </button>
+        </div>
+
+        <!-- Booktabs Interactive Syllabus Panel -->
+        <div id="syllabus-panel" class="syllabus-sheet reveal" role="tabpanel" aria-labelledby="tab-rl">
+          <div class="sheet-running-header">
+            <strong id="sheet-track-name">Rangkaian Listrik</strong>
+            <span id="sheet-track-code">SEMESTER 5 · KKI &amp; REGULAR</span>
+          </div>
+          <p id="sheet-track-summary" class="sheet-summary"></p>
+
+          <div class="table-scroll">
+            <table class="booktabs-table syllabus-table">
+              <thead>
+                <tr>
+                  <th style="width: 96px;" data-i18n="syllabus.colMod">MODULE</th>
+                  <th data-i18n="syllabus.colTopic">EXPERIMENT TITLE &amp; SCOPE</th>
+                  <th style="width: 220px;" data-i18n="syllabus.colCheck">CHECKPOINT</th>
+                  <th style="width: 110px; text-align: right;" data-i18n="syllabus.colAction">SPEC</th>
+                </tr>
+              </thead>
+              <tbody id="syllabus-tbody"></tbody>
+            </table>
+          </div>
+
+          <div class="sheet-running-footer">
+            <span id="sheet-footer-note" data-i18n="syllabus.footerNote">Select any module row to inspect objectives, instruments, and pre-lab requirements.</span>
+            <strong>Lab. TTPL</strong>
+          </div>
+        </div>
+
+        <!-- Operating Standard + Semester Schedule Strip -->
+        <div class="ops-grid reveal">
+          <div class="ops-block">
+            <h3 data-i18n="workflow.title">Session Execution Standard</h3>
+            <dl class="ops-steps">
+              <div>
+                <dt>01 · <span data-i18n="workflow.s1Title">Prepare Before Lab</span></dt>
+                <dd data-i18n="workflow.s1Desc">Read bilingual LaTeX PDF modules (ID/EN), watch TTPL FTUI YouTube briefings, and complete pre-lab assignments (TP).</dd>
+              </div>
+              <div>
+                <dt>02 · <span data-i18n="workflow.s2Title">Attendance &amp; QnA Gate</span></dt>
+                <dd data-i18n="workflow.s2Desc">Assistants record actual attendance (on-time / late) and QnA scores (0–100) to unlock report submission.</dd>
+              </div>
+              <div>
+                <dt>03 · <span data-i18n="workflow.s3Title">Next-Day 23:59 WIB Deadline</span></dt>
+                <dd data-i18n="workflow.s3Desc">PDF reports upload via the digital portal with a 5-minute grace window and 10 pts/min late deduction.</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="ops-block">
+            <h3 data-i18n="calendar.title">Semester Operating Calendar</h3>
+            <div class="gantt-table">
+              <div class="gantt-row gantt-head">
+                <span data-i18n="calendar.phase">PHASE</span>
+                <span>SEP</span><span>OCT</span><span>NOV</span><span>DEC</span>
+              </div>
+              <div class="gantt-row">
+                <strong data-i18n="calendar.m1Title">RL Briefing, Pre-test &amp; Practicum</strong>
+                <span class="gantt-bar active-blue"></span>
+                <span class="gantt-bar active-blue half"></span>
+                <span class="gantt-bar"></span>
+                <span class="gantt-bar"></span>
+              </div>
+              <div class="gantt-row">
+                <strong data-i18n="calendar.m2Title">UTS, RL Post-test &amp; IDP Pre-test</strong>
+                <span class="gantt-bar"></span>
+                <span class="gantt-bar active-gold"></span>
+                <span class="gantt-bar"></span>
+                <span class="gantt-bar"></span>
+              </div>
+              <div class="gantt-row">
+                <strong data-i18n="calendar.m3Title">IDP Practicum (KKI &amp; Regular)</strong>
+                <span class="gantt-bar"></span>
+                <span class="gantt-bar"></span>
+                <span class="gantt-bar active-blue"></span>
+                <span class="gantt-bar"></span>
+              </div>
+              <div class="gantt-row">
+                <strong data-i18n="calendar.m4Title">UAS, IDP Post-test &amp; Grade Release</strong>
+                <span class="gantt-bar"></span>
+                <span class="gantt-bar"></span>
+                <span class="gantt-bar"></span>
+                <span class="gantt-bar active-gold"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 03 · INTERACTIVE SCIENTIFIC ENGINEERING BENCH
+         ================================================================ -->
+    <section id="bench" class="section" tabindex="-1">
+      <div class="container">
+        <header class="chapter-header reveal">
+          <div class="chapter-running">
+            <span>SECTION 03</span>
+            <span data-i18n="bench.running">INTERACTIVE SCIENTIFIC SIMULATION BENCH</span>
+          </div>
+          <h2 data-i18n="bench.title">Verify the Physics Before Entering the Lab.</h2>
+          <div class="chapter-rule" aria-hidden="true"></div>
+        </header>
+
+        <div class="bench-frame reveal">
+          <div class="bench-toolbar" role="tablist" aria-label="Engineering simulations">
+            <button type="button" class="bench-tab active" role="tab" aria-selected="true" data-sim="fop" id="btab-fop" aria-controls="bpanel-fop">
+              <span class="mono">IDP · MOD 07</span>
+              <strong data-i18n="bench.tabFop">3-Point Fall-of-Potential Grounding (IEEE 81)</strong>
+            </button>
+            <button type="button" class="bench-tab" role="tab" aria-selected="false" data-sim="hv" id="btab-hv" aria-controls="bpanel-hv">
+              <span class="mono">T3 · MOD 05</span>
+              <strong data-i18n="bench.tabHv">Sphere-Gap Air Breakdown (IEC 60052)</strong>
+            </button>
+            <button type="button" class="bench-tab" role="tab" aria-selected="false" data-sim="power" id="btab-power" aria-controls="bpanel-power">
+              <span class="mono">IDP · MOD 04–05</span>
+              <strong data-i18n="bench.tabPower">AC Power Triangle &amp; Power Factor (PLN)</strong>
+            </button>
+          </div>
+
+          <!-- BENCH 1: 3-POINT FALL-OF-POTENTIAL GROUNDING (DIRECTLY FROM VirtualGroundLab.m) -->
+          <div class="bench-panel active" id="bpanel-fop" role="tabpanel" aria-labelledby="btab-fop">
+            <div class="bench-split">
+              <div class="bench-canvas-wrap">
+                <div class="plot-caption">
+                  <span>PLOT 01 · R(x) = V_EP / I_test vs. POTENTIAL PROBE DISTANCE x</span>
+                  <span id="fop-badge" class="status-tag ok">61.8% PLATEAU VALID</span>
+                </div>
+                <canvas id="fop-canvas" width="640" height="340" aria-label="Three-point Fall-of-Potential grounding resistance curve"></canvas>
+              </div>
+
+              <div class="bench-controls">
+                <div class="control-block">
+                  <div class="ctrl-head">
+                    <label for="fop-rho" data-i18n="bench.soilRho">Soil Resistivity (ρ — UI Depok Loam)</label>
+                    <output id="fop-rho-out">85 Ω·m</output>
+                  </div>
+                  <input type="range" id="fop-rho" min="20" max="200" step="5" value="85">
+                </div>
+
+                <div class="control-block">
+                  <div class="ctrl-head">
+                    <label for="fop-len" data-i18n="bench.rodLen">Driven Rod Length (L)</label>
+                    <output id="fop-len-out">2.5 m</output>
+                  </div>
+                  <input type="range" id="fop-len" min="1.0" max="6.0" step="0.5" value="2.5">
+                </div>
+
+                <div class="control-block">
+                  <div class="ctrl-head">
+                    <label for="fop-pct" data-i18n="bench.probePos">Potential Probe P Position (x / D, D = 40 m)</label>
+                    <output id="fop-pct-out">61.8% (24.7 m)</output>
+                  </div>
+                  <input type="range" id="fop-pct" min="10" max="90" step="0.2" value="61.8">
+                </div>
+
+                <div class="preset-row">
+                  <button type="button" class="snap-btn" data-fop-snap="52">52%</button>
+                  <button type="button" class="snap-btn active" data-fop-snap="61.8">61.8% Rule</button>
+                  <button type="button" class="snap-btn" data-fop-snap="72">72%</button>
+                  <button type="button" class="snap-btn" data-fop-snap="86">86% (Error)</button>
+                </div>
+
+                <dl class="readout-table">
+                  <div><dt>Measured R(x)</dt><dd id="fop-rx">28.68 Ω</dd></div>
+                  <div><dt>True Earthing R_E</dt><dd id="fop-re">28.63 Ω</dd></div>
+                  <div><dt>Relative Error</dt><dd id="fop-err">0.17%</dd></div>
+                  <div><dt>PUIL (&lt; 5 Ω)</dt><dd id="fop-puil">Improve Earthing</dd></div>
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <!-- BENCH 2: IEC 60052 SPHERE GAP BREAKDOWN -->
+          <div class="bench-panel" id="bpanel-hv" role="tabpanel" aria-labelledby="btab-hv" hidden>
+            <div class="bench-split">
+              <div class="bench-canvas-wrap">
+                <div class="plot-caption">
+                  <span>PLOT 02 · AIR DIELECTRIC FIELD E = V / d &amp; SPHERE GAP CHAMBER</span>
+                  <span id="hv-badge" class="status-tag crit">BREAKDOWN READY</span>
+                </div>
+                <canvas id="hv-canvas" width="640" height="340" aria-label="High voltage sphere gap dielectric simulation"></canvas>
+              </div>
+
+              <div class="bench-controls">
+                <div class="control-block">
+                  <div class="ctrl-head">
+                    <label for="hv-v" data-i18n="bench.hvV">Applied Peak Voltage (V)</label>
+                    <output id="hv-v-out">240 kV</output>
+                  </div>
+                  <input type="range" id="hv-v" min="10" max="500" step="10" value="240">
+                </div>
+
+                <div class="control-block">
+                  <div class="ctrl-head">
+                    <label for="hv-d" data-i18n="bench.hvD">Sphere Gap Spacing (d)</label>
+                    <output id="hv-d-out">6.0 cm</output>
+                  </div>
+                  <input type="range" id="hv-d" min="1" max="15" step="0.5" value="6">
+                </div>
+
+                <dl class="readout-table">
+                  <div><dt>Electric Field E</dt><dd id="hv-e-out">40.0 kV/cm</dd></div>
+                  <div><dt>Air Threshold E_c</dt><dd>30.0 kV/cm</dd></div>
+                  <div><dt>Breakdown V_b(d)</dt><dd id="hv-vb-out">180.0 kV</dd></div>
+                  <div><dt>Dielectric State</dt><dd id="hv-state-out">Critical</dd></div>
+                </dl>
+
+                <div class="hv-actions">
+                  <button type="button" id="hv-fire-btn" class="btn-solid">Trigger Flashover Discharge</button>
+                  <label class="inline-check">
+                    <input type="checkbox" id="hv-audio-chk">
+                    <span data-i18n="bench.audio">Synthesize Spark Audio</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BENCH 3: AC POWER TRIANGLE & PLN POWER FACTOR (MODUL 4 & 5 IDP) -->
+          <div class="bench-panel" id="bpanel-power" role="tabpanel" aria-labelledby="btab-power" hidden>
+            <div class="bench-split">
+              <div class="bench-canvas-wrap">
+                <div class="plot-caption">
+                  <span>PLOT 03 · v(t), i(t), INSTANTANEOUS POWER p(t) &amp; POWER TRIANGLE</span>
+                  <span id="pf-badge" class="status-tag ok">PLN COMPLIANT (cos φ ≥ 0.85)</span>
+                </div>
+                <canvas id="power-canvas" width="640" height="340" aria-label="AC voltage, current, and power triangle visualization"></canvas>
+              </div>
+
+              <div class="bench-controls">
+                <div class="control-block">
+                  <div class="ctrl-head">
+                    <label for="pf-v" data-i18n="bench.vrms">RMS Line Voltage (V_rms)</label>
+                    <output id="pf-v-out">220 V</output>
+                  </div>
+                  <input type="range" id="pf-v" min="198" max="240" step="1" value="220">
+                </div>
+
+                <div class="control-block">
+                  <div class="ctrl-head">
+                    <label for="pf-i" data-i18n="bench.irms">RMS Load Current (I_rms)</label>
+                    <output id="pf-i-out">10.0 A</output>
+                  </div>
+                  <input type="range" id="pf-i" min="1" max="30" step="0.5" value="10">
+                </div>
+
+                <div class="control-block">
+                  <div class="ctrl-head">
+                    <label for="pf-phi" data-i18n="bench.phi">Phase Angle φ (+Lagging L / −Leading C)</label>
+                    <output id="pf-phi-out">+25° (Lagging)</output>
+                  </div>
+                  <input type="range" id="pf-phi" min="-60" max="60" step="1" value="25">
+                </div>
+
+                <dl class="readout-table">
+                  <div><dt>Active Power P</dt><dd id="pf-p-out">1,994 W</dd></div>
+                  <div><dt>Reactive Power Q</dt><dd id="pf-q-out">+930 VAR</dd></div>
+                  <div><dt>Apparent Power S</dt><dd id="pf-s-out">2,200 VA</dd></div>
+                  <div><dt>Power Factor cos φ</dt><dd id="pf-cos-out">0.906</dd></div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 04 · LABORATORY INSTRUMENTS LEDGER
+         ================================================================ -->
+    <section id="instruments" class="section section-tinted" tabindex="-1">
+      <div class="container">
+        <header class="chapter-header reveal">
+          <div class="chapter-running">
+            <span>SECTION 04</span>
+            <span data-i18n="instruments.running">EQUIPMENT INVENTORY &amp; SAFETY PROTOCOLS</span>
+          </div>
+          <h2 data-i18n="instruments.title">Calibrated Hardware in the TTPL Hall.</h2>
+          <div class="chapter-rule" aria-hidden="true"></div>
+        </header>
+
+        <div class="instrument-ledger reveal" id="instrument-ledger"></div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 05 · RESEARCH ARTIFACTS, DIGITAL ECOSYSTEM & RECRUITMENT
+         ================================================================ -->
+    <section id="artifacts" class="section" tabindex="-1">
+      <div class="container">
+        <header class="chapter-header reveal">
+          <div class="chapter-running">
+            <span>SECTION 05</span>
+            <span data-i18n="artifacts.running">ENGINEERING ARTIFACTS &amp; DIGITAL INFRASTRUCTURE</span>
+          </div>
+          <h2 data-i18n="artifacts.title">Software, Simulations &amp; Assistant Selection.</h2>
+          <div class="chapter-rule" aria-hidden="true"></div>
+        </header>
+
+        <!-- Real Artifact Showcase Plates from Workspace -->
+        <div class="artifact-plates reveal">
+          <figure class="specimen-figure">
+            <img src="assets/virtual-ground-lab.png" alt="VirtualGroundLab MATLAB 2D Soil Cross-Section and 3-Point FOP Simulation" loading="lazy">
+            <figcaption>
+              <div>
+                <strong>PLATE 01 · VIRTUALGROUNDLAB (MATLAB)</strong>
+                <span data-i18n="artifacts.p1">2-layer soil stratification (UI Depok loam/clay), underground potential contours Φ(x,z), and automated 61.8% FOP verification.</span>
+              </div>
+              <button type="button" class="inspect-link" data-lightbox="assets/virtual-ground-lab.png" data-lightbox-title="VirtualGroundLab — MATLAB 2D Soil Cross-Section &amp; 3-Point FOP" data-i18n="common.enlarge">Enlarge ↗</button>
+            </figcaption>
+          </figure>
+
+          <figure class="specimen-figure">
+            <img src="assets/powerfactory-sld.png" alt="DIgSILENT PowerFactory Single-Line Diagram with PLTS and BESS GFM" loading="lazy">
+            <figcaption>
+              <div>
+                <strong>PLATE 02 · POWER SYSTEM SLD (POWERFACTORY)</strong>
+                <span data-i18n="artifacts.p2">Multi-bus distribution load-flow topology featuring PV (PLTS) &amp; Grid-Forming BESS used in advanced RL &amp; power-system evaluations.</span>
+              </div>
+              <button type="button" class="inspect-link" data-lightbox="assets/powerfactory-sld.png" data-lightbox-title="Distribution Network Single-Line Diagram (PLTS &amp; BESS GFM)" data-i18n="common.enlarge">Enlarge ↗</button>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Technical Stack Ledger -->
+        <div class="infra-strip reveal">
+          <div class="ttpl-quotebox">
+            <strong data-i18n="artifacts.sys1Title">TTPL Digital Practicum Platform</strong>
+            <p data-i18n="artifacts.sys1Desc">Next.js + Supabase PostgreSQL + Google Apps Script 2-way attendance synchronization, tracked PDF reader analytics, RLS grade gating, and automated Google Drive PDF archiving.</p>
+          </div>
+          <div class="ttpl-formulabox">
+            <strong data-i18n="artifacts.sys2Title">Standardized Bilingual LaTeX Module Engine</strong>
+            <p data-i18n="artifacts.sys2Desc">Strict `booktabs` &amp; CircuiTikZ vector typesetting across Indonesian Regular and English KKI editions, paired with MATLAB automated grading sheets.</p>
+          </div>
+        </div>
+
+        <!-- Open Recruitment 5-Stage Timeline Matrix (Direct homage to ttpl-slide-4.jpg) -->
+        <div class="oprec-matrix reveal">
+          <div class="oprec-matrix-head">
+            <div>
+              <span class="mono-kicker" data-i18n="oprec.eyebrow">OPEN RECRUITMENT PIPELINE · L.TTPL</span>
+              <h3 data-i18n="oprec.title">Five-Stage Assistant Selection Schedule</h3>
+            </div>
+            <button type="button" class="inspect-link" data-lightbox="assets/ttpl-slide-2.jpg" data-lightbox-title="TTPL Technical Meeting — Profile &amp; USP Slide" data-i18n="oprec.viewSlide">View Recruitment Slide ↗</button>
+          </div>
+
+          <div class="table-scroll">
+            <table class="booktabs-table oprec-table">
+              <thead>
+                <tr>
+                  <th style="width: 56px;">NO.</th>
+                  <th data-i18n="oprec.colStage">SELECTION STAGE</th>
+                  <th data-i18n="oprec.colFormat">FORMAT &amp; VENUE</th>
+                  <th style="width: 72px; text-align: center;">MAR</th>
+                  <th style="width: 72px; text-align: center;">APR</th>
+                  <th style="width: 72px; text-align: center;">MAY</th>
+                  <th style="width: 72px; text-align: center;">JUN</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="mono">01</td>
+                  <td><strong data-i18n="oprec.s1">Written Exam (RL &amp; IDP)</strong></td>
+                  <td data-i18n="oprec.s1d">100 min per track · LKEL Hall · Scientific calculator</td>
+                  <td class="m-cell on-gold"></td><td class="m-cell"></td><td class="m-cell"></td><td class="m-cell"></td>
+                </tr>
+                <tr>
+                  <td class="mono">02</td>
+                  <td><strong data-i18n="oprec.s2">Individual Teaching Simulation (RL &amp; IDP)</strong></td>
+                  <td data-i18n="oprec.s2d">60 min live session · Randomized module · Lab TTPL</td>
+                  <td class="m-cell"></td><td class="m-cell on-blue"></td><td class="m-cell"></td><td class="m-cell"></td>
+                </tr>
+                <tr>
+                  <td class="mono">03</td>
+                  <td><strong data-i18n="oprec.s3">Equipment Proficiency Test (RL &amp; IDP)</strong></td>
+                  <td data-i18n="oprec.s3d">30 min individual hands-on · Randomized instrument · Lab TTPL</td>
+                  <td class="m-cell"></td><td class="m-cell on-gold"></td><td class="m-cell on-gold"></td><td class="m-cell"></td>
+                </tr>
+                <tr>
+                  <td class="mono">04</td>
+                  <td><strong data-i18n="oprec.s4">Group Teaching Simulation (High Voltage T3)</strong></td>
+                  <td data-i18n="oprec.s4d">60 min team session · Assigned 1 week prior · Lab TTPL</td>
+                  <td class="m-cell"></td><td class="m-cell"></td><td class="m-cell on-blue"></td><td class="m-cell"></td>
+                </tr>
+                <tr>
+                  <td class="mono">05</td>
+                  <td><strong data-i18n="oprec.s5">Final Interview</strong></td>
+                  <td data-i18n="oprec.s5d">Commitment, lab stewardship, and engineering teamwork evaluation</td>
+                  <td class="m-cell"></td><td class="m-cell"></td><td class="m-cell"></td><td class="m-cell on-gold"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 06 · PEOPLE OF TTPL (EDITORIAL ROSTER & CONTACT SHEET)
+         ================================================================ -->
+    <section id="people" class="section section-tinted" tabindex="-1">
+      <div class="container">
+        <header class="chapter-header reveal">
+          <div class="chapter-running">
+            <span>SECTION 06</span>
+            <span data-i18n="people.running">LABORATORY ASSISTANTS &amp; ARCHIVE</span>
+          </div>
+          <h2 data-i18n="people.title">Built by People Who Teach Carefully.</h2>
+          <div class="chapter-rule" aria-hidden="true"></div>
+        </header>
+
+        <!-- Batch 2024 Active Assistants -->
+        <div class="current-roster reveal">
+          <figure class="roster-poster">
+            <img src="assets/people/current-team-announcement.jpg" alt="TTPL Batch 2024 Assistants — Six Names, One New Chapter" loading="lazy">
+            <figcaption>
+              <span>BATCH 2024</span>
+              <span>SIX NAMES, ONE NEW CHAPTER · #UNLEASHYOURPOWER</span>
+            </figcaption>
+          </figure>
+
+          <div class="roster-editorial">
+            <span class="mono-kicker" data-i18n="people.currentEyebrow">ACTIVE ASSISTANTS · 2026/2027</span>
+            <h3>Six Names, One Desk.</h3>
+            <p data-i18n="people.currentDesc">
+              Responsible for daily RL, IDP, and T3 laboratory execution, equipment maintenance, module authoring, and student mentorship across Regular and KKI Electrical Engineering cohorts.
+            </p>
+            <table class="booktabs-table roster-table">
+              <thead>
+                <tr>
+                  <th style="width: 56px;">NO.</th>
+                  <th data-i18n="people.colName">FULL NAME</th>
+                  <th style="text-align: right;" data-i18n="people.colCall">CALLSIGN</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="mono">01</td><td><strong>Dominick Dexter G.</strong></td><td class="mono right">Dexter</td></tr>
+                <tr><td class="mono">02</td><td><strong>Abdul Jafor M.</strong></td><td class="mono right">Jafor</td></tr>
+                <tr><td class="mono">03</td><td><strong>Shannon Aurelia W.</strong></td><td class="mono right">Shannon</td></tr>
+                <tr><td class="mono">04</td><td><strong>Naila Faiza</strong></td><td class="mono right">Naila</td></tr>
+                <tr><td class="mono">05</td><td><strong>Alief Rizki F.</strong></td><td class="mono right">Alief</td></tr>
+                <tr><td class="mono">06</td><td><strong>Iftikharus Raudana M.</strong></td><td class="mono right">Rau</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Archive Contact Sheet -->
+        <div class="archive-bar reveal">
+          <div>
+            <span class="mono-kicker" data-i18n="people.archiveEyebrow">ASSISTANT ARCHIVE</span>
+            <h3 data-i18n="people.archiveTitle">Generations Who Carried TTPL Before Us</h3>
+          </div>
+          <div class="archive-filters" role="group" aria-label="Filter assistant archive">
+            <button type="button" class="filter-tab active" data-batch="all">All (11)</button>
+            <button type="button" class="filter-tab" data-batch="Elektro 23">Elektro ’23 (6)</button>
+            <button type="button" class="filter-tab" data-batch="Elektro 22">Elektro ’22 (5)</button>
+          </div>
+        </div>
+
+        <div class="contact-sheet" id="archive-grid"></div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 07 · ALUMNI FOOTPRINT (LAST 3 YEARS)
+         ================================================================ -->
+    <section id="alumni" class="section" tabindex="-1">
+      <div class="container">
+        <header class="chapter-header reveal">
+          <div class="chapter-running">
+            <span>SECTION 07</span>
+            <span data-i18n="alumni.running">CAREER DESTINATIONS · LAST 3 YEARS</span>
+          </div>
+          <h2 data-i18n="alumni.title">Where TTPL Alumni Power the Industry.</h2>
+          <div class="chapter-rule" aria-hidden="true"></div>
+        </header>
+
+        <div class="alumni-matrix reveal">
+          <div class="alumni-col">
+            <span class="alumni-index">01 · BUMN</span>
+            <h3 data-i18n="alumni.cat1">State-Owned Energy</h3>
+            <ul>
+              <li><strong>Pertamina Hulu Energi</strong><span>Upstream Energy</span></li>
+              <li><strong>PT PLN (Persero)</strong><span>National Power Utility</span></li>
+            </ul>
+          </div>
+
+          <div class="alumni-col">
+            <span class="alumni-index">02 · GLOBAL OEM</span>
+            <h3 data-i18n="alumni.cat2">Power Technology</h3>
+            <ul>
+              <li><strong>Siemens</strong><span>Grid &amp; Electrification</span></li>
+              <li><strong>Schneider Electric</strong><span>Energy Management</span></li>
+              <li><strong>GE Vernova</strong><span>Power &amp; High Voltage</span></li>
+            </ul>
+          </div>
+
+          <div class="alumni-col">
+            <span class="alumni-index">03 · ADVISORY</span>
+            <h3 data-i18n="alumni.cat3">Engineering Consulting</h3>
+            <ul>
+              <li><strong>AFRY</strong><span>Energy &amp; Power Advisory</span></li>
+            </ul>
+          </div>
+
+          <div class="alumni-col">
+            <span class="alumni-index">04 · EPC &amp; LAB</span>
+            <h3 data-i18n="alumni.cat4">Engineering &amp; Testing</h3>
+            <ul>
+              <li><strong>VINCI Energies</strong><span>Energy Infrastructure</span></li>
+              <li><strong>Eni</strong><span>Global Energy</span></li>
+              <li><strong>Anindya</strong><span>Independent Surveyor &amp; Lab</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SECTION 08 · CONTACT & LABORATORY COLOPHON
+         ================================================================ -->
+    <section id="contact" class="section section-tinted" tabindex="-1">
+      <div class="container">
+        <div class="colophon-grid reveal">
+          <div class="colophon-info">
+            <span class="mono-kicker" data-i18n="contact.eyebrow">CONTACT &amp; LOCATION</span>
+            <h2 data-i18n="contact.title">Visit the Laboratory Desk.</h2>
+            <p data-i18n="contact.desc">
+              For practicum administration, open recruitment questions, electrical testing studies, or collaborative engineering work, reach Laboratorium TTPL directly.
+            </p>
+            <address class="colophon-address">
+              <strong>Laboratorium Tegangan Tinggi dan Pengukuran Listrik (TTPL)</strong><br>
+              Gedung Departemen Teknik Elektro, Lantai 2<br>
+              Fakultas Teknik Universitas Indonesia, Kampus Baru UI, Depok 16424
+            </address>
+          </div>
+
+          <div class="colophon-directory">
+            <div class="dir-row">
+              <span class="dir-label">EMAIL</span>
+              <a href="mailto:laboratorium.ttpl@gmail.com" class="dir-val">laboratorium.ttpl@gmail.com</a>
+              <button type="button" class="copy-btn" id="copy-email-btn" data-copy="laboratorium.ttpl@gmail.com" data-i18n="contact.copy">Copy</button>
+            </div>
+            <a class="dir-row dir-link" href="https://www.instagram.com/lttpl.ui" target="_blank" rel="noreferrer">
+              <span class="dir-label">INSTAGRAM</span>
+              <strong class="dir-val">@lttpl.ui</strong>
+              <span class="dir-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="dir-row dir-link" href="https://www.youtube.com/@ttplftui/playlists" target="_blank" rel="noreferrer">
+              <span class="dir-label">YOUTUBE</span>
+              <strong class="dir-val">TTPL FTUI · Practicum Playlists</strong>
+              <span class="dir-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="dir-row dir-link" href="https://ttpl-website.vercel.app" target="_blank" rel="noreferrer">
+              <span class="dir-label">PORTAL</span>
+              <strong class="dir-val">ttpl-website.vercel.app</strong>
+              <span class="dir-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Architectural Running Footer -->
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="footer-left">
+        <img src="assets/ttpl-logo.png" alt="Logo TTPL" width="32" height="32">
+        <span>© 2026 Laboratorium Tegangan Tinggi dan Pengukuran Listrik · FTUI</span>
+      </div>
+      <div class="footer-right">
+        <span>Surging With Voltage · #UnleashYourPower</span>
+        <a href="#top" data-i18n="footer.top">Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- NATIVE TOP-LAYER DIALOG (Module Specification & Plate Lightbox) -->
+  <dialog id="detail-dialog" class="ttpl-dialog" closedby="any" aria-labelledby="dialog-title">
+    <div class="dialog-shell">
+      <div class="dialog-header">
+        <span class="mono-kicker" id="dialog-eyebrow">MODULE SPECIFICATION</span>
+        <button type="button" class="dialog-close" id="dialog-close-btn" aria-label="Close dialog">ESC ✕</button>
+      </div>
+      <h3 id="dialog-title">Title</h3>
+      <div class="ttpl-double-rule compact" aria-hidden="true"></div>
+      <div id="dialog-body" class="dialog-body"></div>
+      <div class="dialog-footer">
+        <button type="button" class="btn-outline" id="dialog-dismiss-btn" data-i18n="common.close">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>
